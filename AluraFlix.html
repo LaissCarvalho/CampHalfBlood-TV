@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AluraFlix - Percy Jackson e os Olimpianos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+            transition: all 0.3s ease-in-out;
+        }
+        header {
+            background-color: #ff6347;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 2.5em;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+        nav a { 
+            color: white;
+            padding: 15px 20px;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #ff6347;
+        }
+        .container {
+            display: none;
+            padding: 20px;
+        }
+        .active {
+            display: block;
+        }
+        h1, h2 {
+            text-align: center;
+            margin: 20px 0;
+            color: #333;
+        }
+        p {
+            text-align: center;
+            font-size: 1.2em;
+            color: #666;
+        }
+        .video-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        iframe {
+            display: block;
+            margin: 20px auto;
+            border: 2px solid #ff6347;
+            border-radius: 10px;
+        }
+        .thumbnail {
+            display: inline-block;
+            cursor: pointer;
+            margin: 10px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            transition: border 0.3s;
+        }
+        .thumbnail:hover {
+            border-color: #ff6347;
+        }
+        .thumbnails {
+            text-align: center;
+        }
+        .btn {
+            display: block;
+            width: 200px;
+            margin: 40px auto;
+            padding: 15px;
+            background-color: #ff6347;
+            color: white;
+            font-size: 1.5em;
+            text-align: center;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #e5533d;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>ALURAFLIX</header>
+    
+    <nav>
+        <a href="#home" onclick="navigate('home')">Início</a>
+        <a href="#trailers" onclick="navigate('trailers')">Trailers</a>
+        <a href="#about" onclick="navigate('about')">Sobre</a>
+        <a href="#characters" onclick="navigate('characters')">Personagens</a>
+        <a href="#adaptations" onclick="navigate('adaptations')">Adaptações</a>
+        <a href="#inspiration" onclick="navigate('inspiration')">Inspiração do Autor</a>
+    </nav>
+
+    <div id="home" class="container active">
+        <h1>Bem-vindo ao AluraFlix</h1>
+        <p>Descubra o universo de Percy Jackson e outras séries emocionantes!</p>
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/GXU2Amw0dVs?si=vcyOrrMRzYLXyrrU" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <a href="https://www.disneyplus.com/" class="btn">ASSISTA JÁ!</a>
+    </div>
+
+    <div id="trailers" class="container">
+        <h2>Trailers</h2>
+        <p>Assista aos trailers mais recentes de Percy Jackson e os Olimpianos.</p>
+        <div class="thumbnails">
+            <div class="thumbnail" onclick="changeVideo('https://www.youtube.com/embed/RknHJ-Cow_Y?si=093h_w467xJJ1NKd', this)">
+                <iframe width="200" height="113" src="https://www.youtube.com/embed/RknHJ-Cow_Y?si=093h_w467xJJ1NKd" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="thumbnail" onclick="changeVideo('https://www.youtube.com/embed/7NOUJqM1UB8?si=4sZ1woVEEIHVNfW6', this)">
+                <iframe width="200" height="113" src="https://www.youtube.com/embed/7NOUJqM1UB8?si=4sZ1woVEEIHVNfW6" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div id="about" class="container">
+        <h2>Sobre Percy Jackson e os Olimpianos</h2>
+        <p>Percy Jackson é uma das sagas de fantasia mais populares do mundo, escrita pelo autor Rick Riordan. A história segue as aventuras de Percy, um semideus filho de Poseidon, que embarca em aventuras épicas.</p>
+        <p>Rick Riordan começou a criar histórias com base na mitologia grega, inspirado por seu filho Haley. A série mistura mitologia grega com o mundo moderno de forma inovadora e envolvente.</p>
+        <p>Disponível exclusivamente no Disney+.</p>
+    </div>
+
+    <div id="characters" class="container">
+        <h2>Personagens Principais</h2>
+        <p><strong>Percy Jackson:</strong> Filho de Poseidon, um semideus que descobre sua verdadeira identidade e enfrenta diversas aventuras.</p>
+        <p><strong>Annabeth Chase:</strong> Filha de Atena, inteligente e estrategista, amiga leal de Percy.</p>
+        <p><strong>Grover Underwood:</strong> Um sátiro que se torna protetor de Percy e ajuda-o em suas missões.</p>
+        <p><strong>Luke Castellan:</strong> Filho de Hermes, um personagem complexo que desempenha um papel crucial na série.</p>
+    </div>
+
+    <div id="adaptations" class="container">
+        <h2>Adaptações de Percy Jackson</h2>
+        <p>A série teve adaptações cinematográficas, incluindo "Percy Jackson e o Ladrão de Raios" (2010) e "Percy Jackson e o Mar de Monstros" (2013). Apesar de um elenco talentoso, os filmes não foram bem recebidos.</p>
+        <p>Uma nova série está sendo produzida pela Disney+, com Rick Riordan envolvido no processo criativo, prometendo uma adaptação mais fiel aos livros.</p>
+    </div>
+
+    <div id="inspiration" class="container">
+        <h2>Inspiração do Autor</h2>
+        <p>Rick Riordan se inspirou em seu filho Haley, que tem TDAH e dislexia. Ao criar Percy, Riordan quis mostrar que essas características não são falhas, mas sim partes importantes de sua heroína.</p>
+        <p>A paixão de Riordan pela mitologia e suas experiências pessoais moldaram a narrativa, conectando-se com leitores que se sentem diferentes ou fora do lugar.</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 AluraFlix. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function navigate(pageId) {
+            // Esconde todas as seções
+            const sections = document.querySelectorAll('.container');
+            sections.forEach(section => section.classList.remove('active'));
+
+            // Mostra a seção clicada
+            const activeSection = document.getElementById(pageId);
+            activeSection.classList.add('active');
+        }
+
+        function changeVideo(videoUrl, thumbnail) {
+            const mainVideo = document.querySelector('#home iframe');
+            mainVideo.src = videoUrl;
+
+            const thumbnails = document.querySelectorAll('.thumbnail iframe');
+            thumbnails.forEach(thumb => thumb.src = thumb.src);
+        }
+    </script>
+
+</body>
+</html>
